@@ -106,10 +106,12 @@ rsd release -m
     * [uglify-js](http://lisperator.net/uglifyjs/): 压缩所有类JS语言代码
     * [html-minifier](http://kangax.github.io/html-minifier/): 压缩所有类HTML语言代码
 1. 还可以给资源加CDN域名，在release的时候追加 ``-D`` 或者 ``--domains`` 参数即可，域名配置写在fis-conf.js里：
+
     ```javascript
     // fis-conf.js
     fis.config.set('roadmap.domain', [ 'http://localhost:8080' ]);
     ```
+
 1. 所有常规代码中的资源定位接口都会经过工具处理，包括：
     * 类CSS文件中：
         * 背景图url
@@ -125,6 +127,7 @@ rsd release -m
 1. 所有资源文件可以任意相互引用，工具会处理资源定位标记，使之服从知乎回答中提到的优化策略。
 1. 还提供了资源内嵌的编译接口，用于把一个资源的内容以文本、字符串或者base64的形式嵌入到 ``任意`` 一个文本文件中。
 1. 为了不用每次保存代码就执行一下release命令，工具中提供了文件监听和浏览器自动刷新功能，只要在release的时候在追加上 ``-w`` 和 ``-L`` 两个参数即可（注意L的大小写），比如：
+
     ```bash
     rsd release -omwL  #压缩、加md5戳、文件监听、浏览器自动刷新
     ```
