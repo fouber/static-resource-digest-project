@@ -128,3 +128,7 @@ rsd release -m
     ```bash
     rsd release -omwL  #压缩、加md5戳、文件监听、浏览器自动刷新
     ```
+
+## 关于这个小工具
+
+它的原码在 [这里](https://github.com/fouber/static-resource-digest)。是的，就这么一点点代码，花了大概半小时写完的，因为一切都在 [fis](http://fis.baidu.com) 中集成好了，我只是追加几个语言编译插件而已。
